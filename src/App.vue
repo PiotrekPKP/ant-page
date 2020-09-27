@@ -1,26 +1,36 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Navbar :links="links" />
+  <Routes />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from "@/components/Navbar";
+import Routes from "@/components/Routes.js";
+
+const links = [
+  {text: "Home", link: "/"},
+  {text: "Members", link: "/members"},
+  {text: "Contact", link: "/contact"},
+];
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Routes,
+    Navbar
+  },
+  data() {
+    return {
+      links: links
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+html, body {
+  font-family: 'Roboto', sans-serif;
 }
 </style>
