@@ -34,4 +34,16 @@ export default {
   html, body {
     font-family: 'Roboto', sans-serif;
   }
+
+  ::-webkit-scrollbar {
+    width:5px
+  }
+
+  ::-webkit-scrollbar-track {
+    background:#ffffff;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background:#ff443c;
+  }
 </style>

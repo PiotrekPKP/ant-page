@@ -1,9 +1,9 @@
 <template>
   <div class="lister">
-    <div class="lister-object" v-for="(object, i) in list" :key="i" @click="redirect(object.id)">
+    <router-link class="lister-object" v-for="(object, i) in list" :key="i" :to="getUrl(object.id)">
       <img :src="getImageSrc(object.image)" alt="Logo" class="lister-object__image">
       <span class="lister-object__name">{{ object.name }}</span>
-    </div>
+    </router-link>
   </div>
 </template>
 
@@ -15,10 +15,10 @@ export default {
   },
   methods: {
     getImageSrc(src) {
-      return require('../assets/images' + src)
+      return require('../assets/images' + src);
     },
-    redirect(to) {
-      window.location.href = `/project?id=${to}`;
+    getUrl(id) {
+      return '/project/' + id;
     }
   }
 }
@@ -29,6 +29,8 @@ export default {
     padding-top: 50px;
 
     .lister-object {
+      text-decoration: none !important;
+      color: black !important;
       display: flex;
       align-items: center;
       margin-bottom: 30px;

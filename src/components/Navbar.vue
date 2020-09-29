@@ -3,10 +3,9 @@
     <img class="navbar__logo" src="../assets/images/logo.png" alt="Logo">
     <div class="navbar__separator"/>
     <div class="navbar__links">
-      <div v-for="link in links" :key="link.text" class="navbar__link" :class="{'navbar__link-active': path === link.link}" @click="redirect(link.link)">
+      <router-link v-for="link in links" :key="link.text" class="navbar__link" :to="link.link">
         {{ link.text }}
-        {{ log(link.link) }}
-      </div>
+      </router-link>
     </div>
   </div>
 </template>
@@ -14,6 +13,7 @@
 <script>
 
 import router from "@/router";
+import Vue from "vue";
 
 export default {
   name: "Navbar",
@@ -57,11 +57,13 @@ export default {
       display: flex;
 
       .navbar__link {
+        text-decoration: none !important;
+        color: black !important;
         margin-left: 30px;
         position: relative;
         cursor: pointer;
 
-        &.navbar__link-active {
+        &.router-link-active {
           font-weight: bold;
 
           &:after {
@@ -71,7 +73,7 @@ export default {
             left: 0;
             right: 0;
             height: 4px;
-            background: #FF443C;
+            background: #ff443c;
           }
         }
       }
