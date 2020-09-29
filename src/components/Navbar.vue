@@ -5,12 +5,16 @@
     <div class="navbar__links">
       <div v-for="link in links" :key="link.text" class="navbar__link" :class="{'navbar__link-active': path === link.link}" @click="redirect(link.link)">
         {{ link.text }}
+        {{ log(link.link) }}
       </div>
     </div>
   </div>
 </template>
 
 <script>
+
+import router from "@/router";
+
 export default {
   name: "Navbar",
   props: {
@@ -26,7 +30,7 @@ export default {
   },
   methods: {
     redirect(to) {
-      window.location.href = to;
+      router.push(to);
     }
   }
 }

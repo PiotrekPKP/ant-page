@@ -1,22 +1,23 @@
 <template>
   <Navbar :links="links" />
-  <Routes />
+  <RouterView />
 </template>
 
 <script>
 import Navbar from "@/components/Navbar";
-import Routes from "@/components/Routes.js";
+import Home from "@/views/NotFound";
 
 const links = [
   {text: "Home", link: "/"},
   {text: "Members", link: "/members"},
   {text: "Contact", link: "/contact"},
+  {text: "Login", link: "/login"}
 ];
 
 export default {
   name: 'App',
   components: {
-    Routes,
+    Home,
     Navbar
   },
   data() {
@@ -27,10 +28,10 @@ export default {
 }
 </script>
 
-<style>
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+<style lang="scss">
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
-html, body {
-  font-family: 'Roboto', sans-serif;
-}
+  html, body {
+    font-family: 'Roboto', sans-serif;
+  }
 </style>
