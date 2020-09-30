@@ -26,6 +26,9 @@ export default {
       state,
       projectId
     }
+  },
+  beforeCreate() {
+    document.body.className = 'scroll';
   }
 }
 </script>

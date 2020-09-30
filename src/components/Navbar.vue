@@ -1,36 +1,27 @@
 <template>
   <div class="navbar">
-    <img class="navbar__logo" src="../assets/images/logo.png" alt="Logo">
+    <router-link to="/"><img class="navbar__logo" src="../assets/images/logo.png" alt="Logo"></router-link>
     <div class="navbar__separator"/>
     <div class="navbar__links">
-      <router-link v-for="link in links" :key="link.text" class="navbar__link" :to="link.link">
+      <div class="navbar__link-container" v-for="link in links" :key="link.text">
+        <router-link class="navbar__link" :to="link.link" v-if="link.active">
+          {{ link.text }}
+        </router-link>
+        <span v-else class="navbar__link not-active">
         {{ link.text }}
-      </router-link>
+      </span>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-
-import router from "@/router";
-import Vue from "vue";
-
 export default {
   name: "Navbar",
   props: {
     links: {
       type: Array,
       required: true
-    }
-  },
-  data() {
-    return {
-      path: window.location.pathname
-    }
-  },
-  methods: {
-    redirect(to) {
-      router.push(to);
     }
   }
 }
@@ -77,10 +68,14 @@ export default {
           }
         }
       }
+
+      .not-active {
+        color: gray !important;
+      }
     }
   }
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 720px) {
     .navbar {
       flex-direction: column;
       text-align: center;

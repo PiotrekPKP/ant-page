@@ -11,9 +11,13 @@
 
 <script>
 import Title from "@/components/Title";
+
 export default {
-name: "Home",
-  components: {Title}
+  name: "Home",
+  components: {Title},
+  beforeCreate() {
+    document.body.className = 'no-scroll';
+  }
 }
 </script>
 
@@ -31,7 +35,7 @@ name: "Home",
     }
   }
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 720px) {
     .home__content {
       margin-left: 50px !important;
     }

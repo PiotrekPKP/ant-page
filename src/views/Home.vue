@@ -27,6 +27,9 @@ export default {
     return {
       projects: projects
     }
+  },
+  beforeCreate() {
+    document.body.className = 'no-scroll';
   }
 }
 </script>
@@ -45,7 +48,7 @@ export default {
     }
   }
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 720px) {
     .home__content {
       margin-left: 50px !important;
     }

@@ -29,6 +29,7 @@ export default {
     padding-top: 50px;
 
     .lister-object {
+      padding-bottom: 20px;
       text-decoration: none !important;
       color: black !important;
       display: flex;
@@ -42,9 +43,8 @@ export default {
       }
 
       .lister-object__name {
-        font-weight: bold;
         margin-left: 20px;
-        font-size: 1.3rem;
+        font-size: 28px;
       }
     }
   }

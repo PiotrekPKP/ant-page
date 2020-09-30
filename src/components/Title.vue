@@ -27,12 +27,13 @@ export default {
         left: -20px;
         right: 70px;
         height: 50px;
+        max-width: 450px;
         background: #FF443C;
       }
     }
   }
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 720px) {
     .title {
 
       h1 {

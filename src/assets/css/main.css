@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width:5px
+}
+
+::-webkit-scrollbar-track {
+    background:#ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    background:#ff443c;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+body.scroll {
+    overflow: auto;
+}

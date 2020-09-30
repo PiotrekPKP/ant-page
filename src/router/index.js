@@ -3,6 +3,7 @@ import Home from '@/views/Home.vue'
 import Project from "@/views/Project";
 import Login from "@/views/Login";
 import NotFound from "@/views/NotFound";
+import Members from "@/views/Members";
 
 const routes = [
   {
@@ -19,6 +20,11 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: Login
+  },
+  {
+    path: '/members',
+    name: 'Members',
+    component: Members
   },
   /*{
     path: '*',
