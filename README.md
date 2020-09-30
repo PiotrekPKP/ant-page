@@ -1,24 +1,9 @@
-# ant-page
+![Logo](https://raw.githubusercontent.com/PiotrekPKP/ant-page/master/src/assets/images/logo.png)
 
-## Project setup
-```
-yarn install
-```
+# ANT Page
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## What's that?
+A small single-page website for storing ANT's projects. Also, small project landing pages will be there!
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Who's ANT?
+Programmers duo ;)
